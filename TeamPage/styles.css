@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+body header {
+  margin: 4.4375rem 0 2.0625rem .75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body header h1 {
+  font-family: 'PT Serif';
+  font-weight: 700;
+  font-size: 2.25rem;
+  letter-spacing: -0.045em;
+  color: black;
+  margin-bottom: 2.375rem;
+}
+
+body header .desc h2 {
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  color: black;
+  margin-bottom: .625rem;
+}
+
+body header .desc p {
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.3125rem;
+  color: black;
+  max-width: 333px;
+}
+
+body main {
+  margin: auto;
+}
+
+body main .card-grid {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 1.25rem;
+  grid-row-gap: 1.875rem;
+}
+
+body main .card-grid .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .card-grid .card figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: .625rem;
+}
+
+body main .card-grid .card figure img {
+  height: 13.125rem;
+  margin-right: .4063rem;
+}
+
+body main .card-grid .card figure figcaption {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: 'PT Serif', serif;
+  text-transform: uppercase;
+  font-size: .625rem;
+}
+
+body main .card-grid .card p {
+  font-weight: 600;
+  font-size: .875rem;
+}
+
+body main .card-grid .card:nth-child(even) {
+  margin-top: 3.125rem;
+}
+
+body footer {
+  margin-top: 6.25rem;
+  margin-bottom: 1.5rem;
+}
+
+body footer p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .875rem;
+  text-align: center;
+  font-weight: 500;
+  color: #a8a8a8;
+}
+
+@media (min-width: 1000px) {
+  body header {
+    margin: 6.875rem 0 1.875rem 15.1875rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body header h1 {
+    margin-right: 13.4375rem;
+    margin-bottom: 0;
+  }
+  body header .desc p {
+    max-width: 25rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
