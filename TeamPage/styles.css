@@ -1,144 +1,182 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
-body header {
-  margin: 4.4375rem 0 2.0625rem .75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+header {
+    margin-top: 4.4375rem;
+    margin-left: .75rem;
 }
 
-body header h1 {
-  font-family: 'PT Serif';
-  font-weight: 700;
-  font-size: 2.25rem;
-  letter-spacing: -0.045em;
-  color: black;
-  margin-bottom: 2.375rem;
+.header__title {
+    font-family: 'PT Serif', sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    letter-spacing: -0.045em;
+    margin-bottom: 2.375rem;
 }
 
-body header .desc h2 {
-  font-weight: 600;
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  color: black;
-  margin-bottom: .625rem;
+.header__desc {
+    margin-top: 2.375rem
 }
 
-body header .desc p {
-  font-weight: 400;
-  font-size: .875rem;
-  line-height: 1.3125rem;
-  color: black;
-  max-width: 333px;
+.header__descTitle {
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    margin-bottom: .625rem;
 }
 
-body main {
-  margin: auto;
+.header__descText {
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.3125rem;
+    width: 75%;
+    margin-top: .625rem;
 }
 
-body main .card-grid {
-  width: 90%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 1.25rem;
-  grid-row-gap: 1.875rem;
+.teamGrid__wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body main .card-grid .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+    margin-top: 2.8125rem;
+    margin-bottom: 8.4375rem;
 }
 
-body main .card-grid .card figure {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: .625rem;
+.teamGrid__card {
+    display: flex;
+    justify-content: left;
 }
 
-body main .card-grid .card figure img {
-  height: 13.125rem;
-  margin-right: .4063rem;
+.teamGrid__card:nth-child(even) {
+    margin-top: 45px;
+    margin-left: 1.5625rem;
 }
 
-body main .card-grid .card figure figcaption {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-family: 'PT Serif', serif;
-  text-transform: uppercase;
-  font-size: .625rem;
+.card__person {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 36vw;
+    max-width: 238px;
 }
 
-body main .card-grid .card p {
-  font-weight: 600;
-  font-size: .875rem;
+.card__img {
+    max-width: 238px;
+    margin-bottom: .3125rem;
 }
 
-body main .card-grid .card:nth-child(even) {
-  margin-top: 3.125rem;
+.card__name {
+    font-weight: 600;
+    font-size: .875rem;
+    color: black;
+    margin-top: .3125rem;
 }
 
-body footer {
-  margin-top: 6.25rem;
-  margin-bottom: 1.5rem;
+.card__title {
+    writing-mode: vertical-lr;
+    font-family: 'PT Serif', sans-serif;
+    text-transform: uppercase;
+    font-size: .625rem;
+    color: black;
+    margin-left: .375rem;
 }
 
-body footer p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .875rem;
-  text-align: center;
-  font-weight: 500;
-  color: #a8a8a8;
+footer {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (min-width: 1000px) {
-  body header {
-    margin: 6.875rem 0 1.875rem 15.1875rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  body header h1 {
-    margin-right: 13.4375rem;
-    margin-bottom: 0;
-  }
-  body header .desc p {
-    max-width: 25rem;
-  }
+.attribution {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    color: #A9A9A9;
+    font-weight: 500;
+    margin-bottom: inherit
 }
-/*# sourceMappingURL=styles.css.map */
+
+.attribution__highlight {
+    text-decoration: underline;
+    font-weight: 700;
+    color: inherit;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 400px) {
+    .card__name {
+        font-size: 1rem;
+    }
+
+    .card__title {
+        font-size: .75rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .card__name {
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .teamGrid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr); 
+    }
+    
+    .teamGrid__card:nth-child(even) {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .teamGrid__card:nth-child(2) {
+        margin-top: 95px;
+        margin-left: 1.5625rem;
+    }
+
+    .teamGrid__card:nth-child(5) {
+        margin-top: 95px;
+        margin-left: 1.5625rem;
+    }
+
+    .teamGrid__card:nth-child(6) {
+        margin-left: 1.5625rem;
+    }
+
+    .teamGrid__card:nth-child(3) {
+        margin-left: 1.5625rem;
+    }
+
+
+    header {
+        display: flex;
+        max-width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .header__descText {
+        width: 450px;
+        font-size: 1.125rem;
+        line-height: 1.6875rem;
+    }
+
+}
