@@ -1,0 +1,318 @@
+// Variables
+
+// Fonts
+$font-logo: "Crimson Pro", sans-serif;
+$font-primary: "Lora", serif;
+$font-secondary: "Montserrat", sans-serif;
+
+// Colors
+$white: #FFFFFF;
+$background: #181719;
+$lighter-gray: #F2F2F2;
+$gray: #828282;
+$light-gray: #A9A9A9;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $background;
+    font-family: $font-primary;
+
+    header.header--mobile {
+        display: flex;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 20px;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        .header__left {
+
+            .header__logo {
+                border: 1px solid $white;
+                padding: 8px;
+
+                .logo__text {
+                    font-family: $font-logo;
+                    font-weight: 200;
+                    font-size: .875rem;
+                    text-transform: uppercase;
+                    color: $white;
+                }
+            }
+        }
+
+        .header__right {
+            
+            button {
+                width: 45px;
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        .nav__menu--mobile--aniOpen {
+            animation: 600ms ease-in-out ani-menuOpen;
+        }
+
+        .nav__menu--mobile--aniClose {
+            animation: 600ms ease-in-out ani-menuClose;
+        }
+
+        .nav__menu--mobile {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            background-color: $background;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            justify-content: center;
+            align-items: center;
+            
+            
+            button {
+                width: 22px;
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-top: 20px;
+                margin-right: 20px;
+                opacity: 0;
+                transition: opacity 2s ease;
+                
+            }
+
+            button.ani-in {
+                opacity: 100;
+                transition: opacity 2s ease;
+            }
+
+            button.ani-out {
+                opacity: 0;
+                transition: opacity 500ms ease;
+            }
+            
+            .nav--mobile--aniIn {
+                opacity: 100;
+                transition: opacity 700ms ease;
+            }
+
+            .nav--mobile--aniOut {
+                opacity: 0;
+                transition: opacity 500ms ease;
+            }
+
+            .nav--mobile {
+                opacity: 0;
+                ul {
+                    list-style: none;
+
+                    li {
+                        font-family: $font-secondary;
+                        font-weight: 500;
+                        font-size: 1.125rem;
+                        text-align: center;
+                        margin: 32px 0;
+                        
+                        
+                        a {
+                            color: $white;
+                            text-decoration-color: transparent;
+                            transition: 300ms ease;
+                        }
+
+                        a:hover {
+                            text-decoration: underline;
+                            text-decoration-thickness: 2px;
+                            text-decoration-color: $white;
+                            transition: 600ms ease;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+    }
+
+    main {
+        .articlePreview {
+            display: flex;
+            flex-direction: column;
+
+            .artPre__content {
+                display: flex;
+                flex-direction: column;
+                margin-left: 12px;
+                margin-bottom: 30px;
+
+                h1.artPre__title {
+                    font-weight: 500;
+                    font-size: 2.25rem;
+                    color: $white;
+                    margin-bottom: 25px;
+                }
+
+                p.artPre__info {
+                    font-family: $font-secondary;
+                    font-weight: 400;
+                    font-size: .875rem;
+                    color: $white;
+                    max-width: 250px;
+                    margin-bottom: 25px;
+                }
+
+                button.artPre__actionBtn {
+                    background-color: transparent;
+                    border: none;
+                    color: $white;
+                    max-width: fit-content;
+                    font-family: $font-secondary;
+                    font-weight: 700;
+                    font-size: .875rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        fill: $white;
+                        margin-left: 15px;
+                    }
+                }
+            }
+
+            .artPre__graphics {
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .artPre__img {
+                    width: 92vw;
+                    max-width: 530px;
+                }
+
+                .artPre__card {
+                    background-color: $background;
+                    margin-left: 30px;
+                    margin-top: -50px;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    width: 80vw;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 17px;
+                    max-width: 360px;
+
+                    .card__author {
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        margin-bottom: 20px;
+
+                        img {
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 99px;
+                        }
+
+                        .author__info {
+                            margin-left: 15px;
+
+                            .author__name {
+                                font-family: $font-secondary;
+                                font-weight: 500;
+                                font-size: .75rem;
+                                color: $white;
+                            }
+
+                            .author__title {
+                                font-family: $font-secondary;
+                                font-weight: 500;
+                                font-size: .625rem;
+                                color: $gray;
+                            }
+                        }
+                    }
+
+                    .card__text {
+                        font-weight: 700;
+                        font-size: 1.125rem;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        padding-bottom: 25px;
+        
+        .attribution {
+            font-family: $font-secondary;
+            font-weight: 500;
+            font-size: .875rem;
+            text-align: center;
+            color: $light-gray;
+
+            strong {
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+
+// CSS Menu animations
+@keyframes ani-menuOpen {
+    from {height: 0vh; width: 0vw; left: 50%; top:50%;}
+    to {height: 100vh; width: 100vw; left: 0; top: 0;}
+}
+
+@keyframes ani-menuLinksIn {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+}
+
+@keyframes ani-menuClose {
+    from {opacity: 100;}
+    to {opacity: 0;}
+}
+
+@keyframes ani-menuLinksOut {
+    from {opacity: 100%;}
+    to {opacity: 0;}
+}
+
+@media (min-width: 460px) {
+    body main .articlePreview .artPre__graphics .artPre__card {
+        margin-top: -120px;
+    }
+}
+
+@media (min-width: 580px) {
+    body main .articlePreview .artPre__graphics .artPre__card {
+        margin-top: -100px;
+        margin-left: 100px;
+    }
+
+    body main .articlePreview .artPre__content p.artPre__info {
+        max-width: 450px;
+    }
+}
+
