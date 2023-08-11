@@ -1,0 +1,67 @@
+.header {
+    margin-top: 52px;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.descContainer {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 12px;
+}
+
+.desc {
+    margin-left: 12px;
+    margin-top: -5px;
+    font-weight: 500;
+    font-style: italic;
+    font-size: .875rem;
+    line-height: 1.0669rem;
+    color: #4F4F4F;
+    max-width: 600px;
+}
+
+.imgWrapper {
+    max-width: 969px;
+    width: 90vw;
+    aspect-ratio: 2;
+    margin-top: 30px;
+    position: relative;
+}
+
+
+@media (max-width: 1060px) {
+    .header {
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .imgWrapper {
+        align-self: center;
+    }
+    .title, .descContainer {
+        text-align: left;
+        width: 90vw;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .title {
+        font-size: 2rem;
+    }
+    .desc {
+        font-size: .75rem;
+    }
+}
+
+@media (max-width: 435px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}

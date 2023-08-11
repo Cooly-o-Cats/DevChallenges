@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 48px;
+}
+
+.mainText {
+    width: 550px;
+}
+
+@media (max-width: 1060px) {
+    main {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 600px) {
+    .mainText {
+        width: 90vw;
+    }
+
+
+    main {
+        justify-content: center;
+    }
+}

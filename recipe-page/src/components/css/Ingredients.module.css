@@ -1,0 +1,17 @@
+.title {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 32px;
+    color: #333333;
+}
+
+.ingredientsWrapper {
+    margin-top: 30px;
+}
+
+@media (max-width: 450px) {
+    .title {
+        font-size: 1.125rem;
+    }
+}
